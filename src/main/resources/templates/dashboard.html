@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" xmlns:attrs="http://www.w3.org/1999/xhtml"
+      xmlns:display="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+</head>
+
+<body>
+<br>
+
+<section class="main-wrap">
+    <div class="dashboardWrap">
+        <div class="container">
+            <div class="row cmptRegistration">
+                <div class="col-sm-12">
+                    <div class="col-sm-6 text-left">
+                        <h2>
+                            Dashboard
+                        </h2>
+                    </div>
+                    <br>
+                    <div class="col-sm-6 text-right">
+                        <h4>
+                            <span sec:authentication="principal.username">User</span>
+                            <a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+                        </h4>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-sm-12">
+                    <div th:unless="${session.dashboard}">
+                        <br>
+                        <div class="col-sm-15 text-center">
+                            <h4>
+                                <div class="alert alert-info">Complete your registration
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <br><br><br><br><br>
+                        <h4>
+                            <div class="col-sm-4 text-center">
+                                <div class="regiStep">1</div>
+                                <a th:href="@{/addressRegistration}">Address</a>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <div class="regiStep">2</div>
+                                <a th:href="@{/identityRegistration}">Identity</a>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <div class="regiStep">3</div>
+                                <a th:href="@{/bankAccountRegistration}">Bank Account</a>
+                            </div>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <br>
+                    <br>
+                    <br>
+                    <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.
+                    <P>Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+<script type="text/javascript"
+        th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+<script type="text/javascript"
+        th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+</html>
