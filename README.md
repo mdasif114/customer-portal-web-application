@@ -13,7 +13,7 @@ It's quite easy.
         mvn spring-boot:run
 
 ###### Option:2. Using Eclipse (or) IntelliJ
-* If you're using eclipse, you need to install & configure STS plugin before start the application.
+* If you're using eclipse, you need to install & configure STS plugin before starting this application.
 * if you're using IntelliJ community edition, then you have to configure main class in maven settings to start the application.
 
 ##### 2) By default, application will be started on 8080 port. 
