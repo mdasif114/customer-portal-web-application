@@ -16,7 +16,7 @@
     <artifactId>customer-web-portal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>customer-portal</name>
+    <name>customer-web-portal</name>
     <description>customer Portal Project</description>
 
     <properties>

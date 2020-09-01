@@ -26,7 +26,8 @@ public class BankRegistrationDto {
 	private String bankName;
 
 	@NotEmpty(message = "SWIFT code is required")
-	@Pattern(regexp = "^[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?$", message = "Please enter valid SWIFT code")
+	@Pattern(regexp = "^[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?$", message = "Please enter valid SWIFT code, " +
+			" format must be 6 alphabets and 5 digits. Ex: MDASIF12345")
 	private String swiftCode;
 
 }

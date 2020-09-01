@@ -19,10 +19,10 @@ public class UserRegistrationDto {
 	private String shopBasedIn;
 
 	@NotEmpty(message = "Mobile number is required")
-	@Pattern(regexp = "^\\+(?:[0-9] ?){6,14}[0-9]$", message = "Please enter valid mobile number")
+	@Pattern(regexp = "^\\+(?:[0-9] ?){6,14}[0-9]$", message = "Please enter valid mobile number starting with '+'. Ex: +123456789")
 	private String mobileNumber;
 
-	@Pattern(regexp = "^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$", message = "Please enter valid email id")
+	@Pattern(regexp = "^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$", message = "Please enter valid email id. Ex: abcdefg@mail.com")
 	private String email;
 
 	@Pattern(regexp = "^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\\d]){1,})(?=(.*[\\W]){1,})(?!.*\\s).{10,30}$", message = "The password field must have between 10 to 30 characters,"
